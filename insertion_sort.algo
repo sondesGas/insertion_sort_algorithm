@@ -1,0 +1,16 @@
+ALGORITHM insertion_sort
+  VAR
+    arr:ARRAY_OF INTEGER[20];
+    i, j, key : INTEGER;
+  BEGIN
+    FOR i FROM 2 TO arr.length-1 STEP 1  DO
+       key := arr[i]; 
+       j := i - 1; 
+        WHILE (j > 0 AND arr[j] > key) DO
+            arr[j + 1] :=  arr[j];              
+            j := j - 1;
+        END_WHILE
+       arr[j + 1] := key;
+    END_FOR
+    
+END
